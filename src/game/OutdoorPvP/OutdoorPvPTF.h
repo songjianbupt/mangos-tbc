@@ -21,7 +21,7 @@
 
 #include "Common.h"
 #include "OutdoorPvP.h"
-#include "Language.h"
+#include "Tools/Language.h"
 
 enum
 {
@@ -173,6 +173,7 @@ class OutdoorPvPTF : public OutdoorPvP
 
     private:
         void UpdateTimerWorldState();
+        void CalculateTimerWorldStateValues(uint32& firstDigit, uint32& secondDigit, uint32& hoursLeft);
 
         // process capture events
         bool ProcessCaptureEvent(GameObject* go, uint32 towerId, Team team, uint32 newWorldState);
